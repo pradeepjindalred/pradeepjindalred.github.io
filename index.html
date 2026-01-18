@@ -1,31 +1,264 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Jindal Computronix</title>
   <meta charset="UTF-8">
+  <title>Jindal Computronix | IT & Cybersecurity Solutions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* Common */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 0;
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: #555;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin-right: 10px;
+      background: #0b5ed7;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #0b5ed7, #003a8f);
+      color: white;
+      padding: 90px 0;
+    }
+
+    #hero-text {
+      font-size: 40px;
+      min-height: 100px;
+      transition: opacity 0.8s ease-in-out;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #e0e0e0;
+      max-width: 700px;
+    }
+
+    /* SERVICES */
+    .services {
+      background: #f8f9fa;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .service-box {
+      background: white;
+      padding: 25px;
+      border-radius: 6px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    /* PARTNERS */
+    .partners {
+      text-align: center;
+    }
+
+    .partner-logos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+      align-items: center;
+    }
+
+    .partner-logos div {
+      padding: 20px;
+      border: 1px solid #eaeaea;
+      border-radius: 6px;
+      font-weight: bold;
+      color: #777;
+    }
+
+    /* DEAL FORM */
+    .deal {
+      background: #f8f9fa;
+    }
+
+    iframe {
+      width: 100%;
+      height: 900px;
+      border: none;
+      margin-top: 30px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 50px 0;
+    }
+
+    footer h3 {
+      color: #fff;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+  </style>
 </head>
-<body style="font-family: Arial; margin:40px">
 
-<h1>Jindal Computronix</h1>
+<body>
 
-<p>
-IT Infrastructure & Network Security Solutions.<br>
-Earn <strong>1% commission</strong> by registering deals with us.
-</p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1 id="hero-text">We are living in an era of evolving cyber threats</h1>
 
-<hr>
+      <p>
+        Jindal Computronix is a trusted partner for IT Infrastructure,
+        Network Security, and Cybersecurity solutions for businesses
+        and enterprises.
+      </p>
 
-<h2>Deal Registration</h2>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe1dLWKA-UTYDAa0cAVgoSU1Gp_kMWVmR5kRTar_HXDROwb5Q/viewform?embedded=true" width="640" height="1661" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <br>
+      <a href="#services" class="btn">Our Services</a>
+      <a href="#deal" class="btn secondary">Register a Deal</a>
+    </div>
+  </section>
 
-<hr>
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <p>Enterprise-grade IT and security solutions tailored to your business.</p>
 
-<p>
-© 2026 Jindal Computronix<br>
-Email: pradeep@jindalcomputronix.co.in
-</p>
+      <div class="service-grid">
+        <div class="service-box">
+          <h3>Network Security</h3>
+          <p>Firewalls, secure WAN, threat prevention, and network protection.</p>
+        </div>
 
-<!-- rebuild trigger -->
+        <div class="service-box">
+          <h3>Endpoint Security</h3>
+          <p>Endpoint protection, antivirus, EDR, and device security.</p>
+        </div>
+
+        <div class="service-box">
+          <h3>Cloud & Virtualization</h3>
+          <p>Secure cloud deployment, virtualization, and hybrid environments.</p>
+        </div>
+
+        <div class="service-box">
+          <h3>Managed IT Services</h3>
+          <p>Monitoring, support, AMC, and proactive IT management.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="partners">
+    <div class="container">
+      <h2>Technology Partners</h2>
+      <p>We work with globally trusted technology vendors.</p>
+
+      <div class="partner-logos">
+        <div>Fortinet</div>
+        <div>SonicWall</div>
+        <div>VMware</div>
+        <div>Microsoft</div>
+        <div>Sophos</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEAL REGISTRATION -->
+  <section class="deal" id="deal">
+    <div class="container">
+      <h2>Deal Registration</h2>
+      <p>
+        Register your deal and earn <strong>1% commission</strong>
+        on successful closure as per agreed terms.
+      </p>
+
+      <!-- REPLACE THE SRC BELOW WITH YOUR GOOGLE FORM EMBED LINK -->
+      <iframe src="PASTE_YOUR_GOOGLE_FORM_EMBED_LINK_HERE"></iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <h3>Contact Us</h3>
+      <p>
+        Jindal Computronix<br>
+        Email:
+        <a href="mailto:pradeep@jindalcomputronix.co.in">
+          pradeep@jindalcomputronix.co.in
+        </a><br>
+        Website: https://jindalcomputronix.co.in
+      </p>
+
+      <p style="margin-top:20px;font-size:14px;">
+        © 2026 Jindal Computronix. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- HERO ROTATING TEXT SCRIPT -->
+  <script>
+    const slogans = [
+      "We are living in an era of evolving cyber threats",
+      "Secure Networks. Protect Data. Enable Growth.",
+      "Enterprise-grade IT & Cybersecurity Solutions",
+      "Building resilient and scalable secure infrastructure"
+    ];
+
+    let index = 0;
+    const heroText = document.getElementById("hero-text");
+
+    setInterval(() => {
+      heroText.style.opacity = 0;
+
+      setTimeout(() => {
+        index = (index + 1) % slogans.length;
+        heroText.textContent = slogans[index];
+        heroText.style.opacity = 1;
+      }, 800);
+    }, 3000);
+  </script>
+
 </body>
 </html>
