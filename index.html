@@ -1,9 +1,181 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Test Page</title>
+<meta charset="UTF-8">
+<title>Jindal Computronix | Cyber & Network Security</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #222;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 60px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+}
+
+header img {
+  height: 50px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 30px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== HERO ===== */
+.hero {
+  height: 100vh;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+    url("hero-cyber.jpg") center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #e6e6e6;
+  max-width: 850px;
+  margin: auto;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 80px 60px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* ===== SERVICES ===== */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #f6f8fb;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  margin-bottom: 12px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #0b1c2d;
+  color: #cccccc;
+  padding: 40px 60px;
+}
+
+footer a {
+  color: #4da3ff;
+  text-decoration: none;
+}
+</style>
 </head>
+
 <body>
-  <h1>Jindal Computronix is working</h1>
+
+<header>
+  <img src="Logo.png" alt="Jindal Computronix Logo">
+  <nav>
+    <a href="#services">Services</a>
+    <a href="https://bulksms.jindalcomputronix.co.in" target="_blank">BulkSMS</a>
+    <a href="deal.html">Deal Registration</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div>
+    <h1>Enterprise Cyber Security Solutions</h1>
+    <p>
+      Firewall, Network Security & Zero Trust Architectures.<br>
+      Secure your business in an era of evolving cyber threats.
+    </p>
+  </div>
+</div>
+
+<section id="services">
+  <h2>Our Services</h2>
+
+  <div class="services">
+    <div class="card">
+      <h3>Network & Firewall Security</h3>
+      <p>Fortinet, Sophos, SonicWall – design, deployment & AMC.</p>
+    </div>
+
+    <div class="card">
+      <h3>Bulk SMS Services</h3>
+      <p>DLT compliant transactional & promotional messaging.</p>
+    </div>
+
+    <div class="card">
+      <h3>Bulk WhatsApp</h3>
+      <p>Official WhatsApp API for business communication.</p>
+    </div>
+
+    <div class="card">
+      <h3>IT Infrastructure</h3>
+      <p>Servers, storage, networking & managed IT services.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><strong>Jindal Computronix</strong></p>
+  <p>Email: pradeep@jindalcomputronix.co.in</p>
+  <p>
+    BulkSMS:
+    <a href="https://bulksms.jindalcomputronix.co.in">
+      bulksms.jindalcomputronix.co.in
+    </a>
+  </p>
+</footer>
+
 </body>
 </html>
