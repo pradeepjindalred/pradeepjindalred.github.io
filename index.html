@@ -1,264 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Jindal Computronix | IT & Cybersecurity Solutions</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Jindal Computronix | Secure. Connect. Grow.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #222;
-      line-height: 1.6;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f9;
+}
 
-    /* Common */
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-      padding: 60px 0;
-    }
+/* HEADER */
+header {
+  background: #ffffff;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
 
-    h1, h2, h3 {
-      margin-bottom: 15px;
-    }
+header img {
+  height: 60px;
+}
 
-    p {
-      color: #555;
-    }
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #003366;
+  font-weight: bold;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      margin-right: 10px;
-      background: #0b5ed7;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: bold;
-    }
+/* HERO */
+.hero {
+  height: 85vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
 
-    .btn.secondary {
-      background: transparent;
-      color: #fff;
-      border: 1px solid #fff;
-    }
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 20, 40, 0.75);
+}
 
-    /* HERO */
-    .hero {
-      background: linear-gradient(135deg, #0b5ed7, #003a8f);
-      color: white;
-      padding: 90px 0;
-    }
+.hero-content {
+  position: relative;
+  text-align: center;
+  max-width: 900px;
+  padding: 20px;
+}
 
-    #hero-text {
-      font-size: 40px;
-      min-height: 100px;
-      transition: opacity 0.8s ease-in-out;
-    }
+.hero h1 {
+  font-size: 44px;
+  margin-bottom: 15px;
+}
 
-    .hero p {
-      font-size: 18px;
-      color: #e0e0e0;
-      max-width: 700px;
-    }
+.hero p {
+  font-size: 20px;
+  opacity: 0.95;
+}
 
-    /* SERVICES */
-    .services {
-      background: #f8f9fa;
-    }
+.hero button {
+  margin-top: 30px;
+  padding: 15px 35px;
+  background: #ff3c3c;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
 
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
+/* SECTIONS */
+.section {
+  padding: 70px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
 
-    .service-box {
-      background: white;
-      padding: 25px;
-      border-radius: 6px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
+.section h2 {
+  text-align: center;
+  margin-bottom: 45px;
+  color: #003366;
+}
 
-    /* PARTNERS */
-    .partners {
-      text-align: center;
-    }
+/* SERVICES */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
 
-    .partner-logos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-      align-items: center;
-    }
+.service-box {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
 
-    .partner-logos div {
-      padding: 20px;
-      border: 1px solid #eaeaea;
-      border-radius: 6px;
-      font-weight: bold;
-      color: #777;
-    }
+.service-box h3 {
+  margin-top: 0;
+  color: #003366;
+}
 
-    /* DEAL FORM */
-    .deal {
-      background: #f8f9fa;
-    }
+/* FOOTER */
+footer {
+  background: #001f3f;
+  color: white;
+  padding: 35px;
+  text-align: center;
+}
 
-    iframe {
-      width: 100%;
-      height: 900px;
-      border: none;
-      margin-top: 30px;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #111;
-      color: #ccc;
-      padding: 50px 0;
-    }
-
-    footer h3 {
-      color: #fff;
-    }
-
-    footer a {
-      color: #ccc;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: white;
-    }
-  </style>
+footer a {
+  color: #ffb3b3;
+  text-decoration: none;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <h1 id="hero-text">We are living in an era of evolving cyber threats</h1>
+<header>
+  <img src="Logo.png" alt="Jindal Computronix">
+  <nav>
+    <a href="#services">Services</a>
+    <a href="https://bulksms.jindalcomputronix.co.in" target="_blank">BulkSMS</a>
+    <a href="deal.html">Deal Registration</a>
+  </nav>
+</header>
 
-      <p>
-        Jindal Computronix is a trusted partner for IT Infrastructure,
-        Network Security, and Cybersecurity solutions for businesses
-        and enterprises.
-      </p>
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1 id="hero-title">Secure Networks in a World of Threats</h1>
+    <p id="hero-text">
+      We are living in an era of evolving cyber risks.  
+      Protect your business with enterprise-grade security.
+    </p>
 
-      <br>
-      <a href="#services" class="btn">Our Services</a>
-      <a href="#deal" class="btn secondary">Register a Deal</a>
+    <button onclick="window.location.href='deal.html'">
+      Deal Registration
+    </button>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <h2>Our Services</h2>
+
+  <div class="services">
+    <div class="service-box">
+      <h3>Network & Firewall Security</h3>
+      <p>Fortinet, Sophos, SonicWall – deployment, AMC & support.</p>
     </div>
-  </section>
 
-  <!-- SERVICES -->
-  <section class="services" id="services">
-    <div class="container">
-      <h2>Our Services</h2>
-      <p>Enterprise-grade IT and security solutions tailored to your business.</p>
-
-      <div class="service-grid">
-        <div class="service-box">
-          <h3>Network Security</h3>
-          <p>Firewalls, secure WAN, threat prevention, and network protection.</p>
-        </div>
-
-        <div class="service-box">
-          <h3>Endpoint Security</h3>
-          <p>Endpoint protection, antivirus, EDR, and device security.</p>
-        </div>
-
-        <div class="service-box">
-          <h3>Cloud & Virtualization</h3>
-          <p>Secure cloud deployment, virtualization, and hybrid environments.</p>
-        </div>
-
-        <div class="service-box">
-          <h3>Managed IT Services</h3>
-          <p>Monitoring, support, AMC, and proactive IT management.</p>
-        </div>
-      </div>
+    <div class="service-box">
+      <h3>IT Infrastructure</h3>
+      <p>Servers, storage, networking & virtualization solutions.</p>
     </div>
-  </section>
 
-  <!-- PARTNERS -->
-  <section class="partners">
-    <div class="container">
-      <h2>Technology Partners</h2>
-      <p>We work with globally trusted technology vendors.</p>
-
-      <div class="partner-logos">
-        <div>Fortinet</div>
-        <div>SonicWall</div>
-        <div>VMware</div>
-        <div>Microsoft</div>
-        <div>Sophos</div>
-      </div>
+    <div class="service-box">
+      <h3>Bulk SMS</h3>
+      <p>Reliable transactional & promotional messaging.</p>
+      <a href="https://bulksms.jindalcomputronix.co.in" target="_blank">
+        Open Bulk SMS →
+      </a>
     </div>
-  </section>
 
-  <!-- DEAL REGISTRATION -->
-  <section class="deal" id="deal">
-    <div class="container">
-      <h2>Deal Registration</h2>
-      <p>
-        Register your deal and earn <strong>1% commission</strong>
-        on successful closure as per agreed terms.
-      </p>
-
-      <!-- REPLACE THE SRC BELOW WITH YOUR GOOGLE FORM EMBED LINK -->
-     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe1dLWKA-UTYDAa0cAVgoSU1Gp_kMWVmR5kRTar_HXDROwb5Q/viewform?embedded=true" width="640" height="1661" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <div class="service-box">
+      <h3>Bulk WhatsApp</h3>
+      <p>Business WhatsApp messaging & automation.</p>
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <h3>Contact Us</h3>
-      <p>
-        Jindal Computronix<br>
-        Email:
-        <a href="mailto:pradeep@jindalcomputronix.co.in">
-          pradeep@jindalcomputronix.co.in
-        </a><br>
-        Website: https://jindalcomputronix.co.in
-      </p>
-
-      <p style="margin-top:20px;font-size:14px;">
-        © 2026 Jindal Computronix. All rights reserved.
-      </p>
+    <div class="service-box">
+      <h3>Digital Marketing</h3>
+      <p>SEO, Google Ads & brand visibility solutions.</p>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <!-- HERO ROTATING TEXT SCRIPT -->
-  <script>
-    const slogans = [
-      "We are living in an era of evolving cyber threats",
-      "Secure Networks. Protect Data. Enable Growth.",
-      "Enterprise-grade IT & Cybersecurity Solutions",
-      "Building resilient and scalable secure infrastructure"
-    ];
+<footer>
+  <p>
+    © 2026 Jindal Computronix<br>
+    Email: pradeep@jindalcomputronix.co.in
+  </p>
+</footer>
 
-    let index = 0;
-    const heroText = document.getElementById("hero-text");
+<!-- HERO IMAGE + SLOGAN ROTATION -->
+<script>
+const hero = document.getElementById("hero");
+const title = document.getElementById("hero-title");
+const text = document.getElementById("hero-text");
 
-    setInterval(() => {
-      heroText.style.opacity = 0;
+const slides = [
+  {
+    img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
+    title: "Secure Networks in a World of Threats",
+    text: "Protect your infrastructure against modern cyber attacks."
+  },
+  {
+    img: "https://images.unsplash.com/photo-1535223289827-42f1e9919769",
+    title: "Enterprise Cyber Security Solutions",
+    text: "Firewall, network security & zero trust architectures."
+  },
+  {
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    title: "Reliable Communication at Scale",
+    text: "Bulk SMS and WhatsApp solutions for growing businesses."
+  }
+];
 
-      setTimeout(() => {
-        index = (index + 1) % slogans.length;
-        heroText.textContent = slogans[index];
-        heroText.style.opacity = 1;
-      }, 800);
-    }, 3000);
-  </script>
+let index = 0;
+
+function changeSlide() {
+  hero.style.backgroundImage = `url(${slides[index].img})`;
+  title.innerText = slides[index].title;
+  text.innerText = slides[index].text;
+  index = (index + 1) % slides.length;
+}
+
+changeSlide();
+setInterval(changeSlide, 5000);
+</script>
 
 </body>
 </html>
