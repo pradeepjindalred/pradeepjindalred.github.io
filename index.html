@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -18,23 +19,34 @@ body {
   color: #222;
 }
 
-/* ===== HEADER (FULLY TRANSPARENT) ===== */
+/* ===== HEADER (TRULY TRANSPARENT) ===== */
 header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 1000;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 16px 60px;
-  background: transparent;
+
+  background: transparent;        /* no color */
+  box-shadow: none;               /* no shadow */
 }
 
+/* LOGO — FORCE TRANSPARENCY */
 header img {
   height: 48px;
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  display: block;
 }
 
+/* NAV */
 nav a {
   color: #ffffff;
   text-decoration: none;
@@ -49,12 +61,14 @@ nav a:hover {
 /* ===== HERO ===== */
 .hero {
   height: 100vh;
+
   background-image:
     linear-gradient(
-      rgba(0,0,0,0.55),
-      rgba(0,0,0,0.55)
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.45)
     ),
     url("hero-cyber.jpg");
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -63,6 +77,7 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
+
   padding: 0 20px;
 }
 
@@ -125,7 +140,9 @@ footer a {
 <body>
 
 <header>
-  <img src="Logo.png" alt="Jindal Computronix">
+  <!-- IMPORTANT: logo is NOT wrapped in any div -->
+  <img src="Logo.png" alt="Jindal Computronix Logo">
+
   <nav>
     <a href="#services">Services</a>
     <a href="https://bulksms.jindalcomputronix.co.in" target="_blank">BulkSMS</a>
